@@ -23,7 +23,7 @@ RUN echo "deb http://ftp.debian.org/debian stretch-backports main" >> /etc/apt/s
 COPY --from=0 /ngx_pagespeed.so /usr/lib/nginx/ngx_pagespeed.so
 
 ADD config/ngx_pagespeed.conf /etc/nginx/modules-available/ngx_pagespeed.conf
-RUN ln -s /etc/nginx/module-available/ngx_pagespeed.conf /etc/nginx/modules-enabled/ngx_pagespeed.conf
+RUN ln -s /etc/nginx/modules-available/ngx_pagespeed.conf /etc/nginx/modules-enabled/ngx_pagespeed.conf
 
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
