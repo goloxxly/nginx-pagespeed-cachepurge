@@ -30,7 +30,7 @@ rm -r $(basename ${psol_url})
 
 echo -e "\n[+] Compiling the PageSpeed Dynamic Module"
 cd ~/nginx-$NGINX_VERSION
-./configure --add-dynamic-module=../incubator-pagespeed-ngx-${NPS_VERSION}-stable --with-compat
-make modules && echo -e "\n[+] Done creating module"
-
-cp objs/ngx_pagespeed.so /
+# ./configure --add-dynamic-module=../incubator-pagespeed-ngx-${NPS_VERSION}-stable --with-compat
+# make modules && echo -e "\n[+] Done creating module"
+#
+# cp objs/ngx_pagespeed.so /
