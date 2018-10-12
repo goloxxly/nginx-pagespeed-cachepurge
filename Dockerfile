@@ -22,7 +22,7 @@ RUN NGINX_VERSION=$(nginx -v 2>&1 | awk -F/ '{print $2}' | awk -F " " '{print $1
     && curl --insecure -f -L -sS https://ngxpagespeed.com/install > ~/psinstall.sh \
     && chmod +x ~/psinstall.sh \
     && ~/psinstall.sh -v latest-stable --dynamic -y -n $NGINX_VERSION -a \
-    "--with-cc-opt='-g -O2 -fdebug-prefix-map=/build/nginx-1.13.3=. \
+    "--with-cc-opt='-g -O2 -fdebug-prefix-map=/build/nginx-$NGINX_VERSION=. \
     -fstack-protector-strong -Wformat -Werror=format-security -fPIC -Wdate-time \
     -D_FORTIFY_SOURCE=2' --with-ld-opt='-Wl,-z,relro -Wl,-z,now -fPIC' \
     --prefix=/usr/share/^Cinx --conf-path=/etc/nginx/nginx.conf \
